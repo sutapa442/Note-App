@@ -1,0 +1,12 @@
+{
+  "name": "simple-notes-app",
+  "version": "1.0.0",
+  "description": "A simple ElectronJS Notes App - demo for students",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}

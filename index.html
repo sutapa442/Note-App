@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Top bar with the main actions -->
+    <div class="toolbar">
+      <h1> My Notes</h1>
+      <div class="toolbar-buttons">
+        <button id="newBtn">New Note</button>
+        <button id="notesBtn">Notes</button>
+      </div>
+    </div>
+
+    <!-- Editor: title + content for whichever note is currently open -->
+    <div class="editor">
+      <input type="text" id="titleInput" placeholder="Note title..." />
+      <textarea id="contentArea" placeholder="Start typing your note here..."></textarea>
+      <div class="editor-actions">
+        <button id="saveBtn">Save Note</button>
+        <span id="status"></span>
+      </div>
+    </div>
+
+    <!-- Notes list panel (hidden until "Notes" is clicked) -->
+    <div id="notesPanel" class="notes-panel hidden">
+      <div class="notes-panel-header">
+        <h2>All Notes</h2>
+        <button id="closePanelBtn">✕ Close</button>
+      </div>
+      <ul id="notesList"></ul>
+    </div>
+
+  </div>
+
+  <!-- renderer.js talks to main.js ONLY through window.noteAPI (preload.js) -->
+  <script src="renderer.js"></script>
+</body>
+</html>
